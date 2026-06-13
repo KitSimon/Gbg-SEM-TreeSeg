@@ -18,7 +18,7 @@ import sys
 # -------------------------------------------------------------------
 
 # Path to the inference script
-SCRIPT_PATH = "AF_3_inference.py"
+SCRIPT_PATH = "tools/AF_3_inference.py"
 
 # mmseg config file (must match the architecture of the checkpoint)
 CONFIG = "configs/aerialformer/aerialformer_base_512x512_gbg.py"

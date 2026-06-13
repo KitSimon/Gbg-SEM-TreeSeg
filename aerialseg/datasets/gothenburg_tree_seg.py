@@ -5,21 +5,7 @@ from mmseg.datasets.custom import CustomDataset
 @DATASETS.register_module()
 class GothenburgTreeSeg(CustomDataset):
     """Lantmäteriet ortofoto 2022.
-
-    In segmentation map annotation for Potsdam dataset, 0 is the ignore index.
-    ``reduce_zero_label`` should be set to True. The ``img_suffix`` and
-    ``seg_map_suffix`` are both fixed to '.png'.
     """
-    #CLASSES = ('impervious_surface', 'building', 'low_vegetation', 'tree',
-    #           'car', 'clutter')
-
-    #PALETTE = [[255, 255, 255], [0, 0, 255], [0, 255, 255], [0, 255, 0],
-    #           [255, 255, 0], [255, 0, 0]]
-
-    #CLASSES = 'trees'                                  #### kolla ifall bakgrund behöver klass, eller ifall "0-index" som ovan räcker ##  reduce_zero_label=True innebär 0 blir tolkas som 255, dvs "null")
-                                                                            
-    #PALETTE = [0, 255, 0]
-
 
     # CLASSES and PALETTE must have the same length, and that length must
     # equal num_classes in configs/aerialformer/aerialformer_tiny_512x512_gbg.py.

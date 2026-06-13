@@ -32,7 +32,7 @@ OUT_DIR = "Project_1/AF_1_training_data"
 TMP_DIR = None
 
 # Path to prepare_tiles.py (relative or absolute)
-SCRIPT_PATH = "AF_1_preprocess.py"                          #"tools/convert_datasets/AF_1_preprocess.py"
+SCRIPT_PATH = "tools/AF_1_preprocess.py"
 
 # -------------------------------------------------------------------
 #  TILING PARAMETERS

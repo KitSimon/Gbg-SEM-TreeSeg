@@ -2,22 +2,22 @@
 dataset_type = 'GothenburgTreeSeg'
 data_root = 'Gbg/output'#data/6potsdam' #gbg' #Dataset Crop 512 stride 256
 img_norm_cfg = dict(
-    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)       #### ta fram värden för alla slutliga band och ta med här 
+    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 crop_size = (512, 512)
 train_pipeline = [
-    dict(type='LoadImageFromFile'),                                         #### lägg till text för ny Class (LoadSingleRSImageFromFile) i mmseg/datasets/pipelines/loading.py samt mmseg/datasets/pipelines/__init__.py
-    dict(type='LoadAnnotations', reduce_zero_label=True),                              #### likt caset i https://github.com/open-mmlab/mmsegmentation/issues/3472
+    dict(type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', reduce_zero_label=True),
     dict(type='Resize', img_scale=(512, 512), ratio_range=(0.5, 2.0)),
     dict(type='RandomCrop', crop_size=crop_size, cat_max_ratio=0.75),
     dict(type='RandomFlip', prob=0.5),
-    dict(type='PhotoMetricDistortion'),                                             #### kolla ifall denna typ av augmentation är "kosher" för fusion-raster
+    dict(type='PhotoMetricDistortion'),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='Pad', size=crop_size, pad_val=0, seg_pad_val=255),
     dict(type='DefaultFormatBundle'),
     dict(type='Collect', keys=['img', 'gt_semantic_seg']),
 ]
 test_pipeline = [
-    dict(type='LoadImageFromFile'),         ##LoadImageFromFile
+    dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
         img_scale=(512, 512),

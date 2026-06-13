@@ -13,16 +13,17 @@ training data are **not** included in this repository.
 
 ## Pipeline
 
-The workflow is driven by four numbered script stages at the repository root.
-Each stage has a `*_runner.py` with the configuration at the top — edit and run
-the runner, not the underlying script.
+The workflow is driven by four numbered script stages. The `*_runner.py`
+scripts at the repository root hold the configuration at the top and invoke
+the underlying scripts (in `tools/`) — edit and run the runners from the
+repository root, not the underlying scripts.
 
 | Stage | Script | Purpose |
 |---|---|---|
 | AF_0 | `AF_0_training_data.py` | Rasterize vector layers (GeoPackage/Shapefile) into a label raster matching an orthophoto grid |
-| AF_1 | `AF_1_preprocess.py` (+ runner) | Tile large image/label rasters into 512×512 training tiles with spatial/random/filename-based train-val splitting |
+| AF_1 | `tools/AF_1_preprocess.py` (+ runner) | Tile large image/label rasters into 512×512 training tiles with spatial/random/filename-based train-val splitting |
 | AF_2 | `AF_2_train_runner.py` | Train via mmsegmentation (`tools/train.py`) with the configs in `configs/aerialformer/*_gbg.py` |
-| AF_3 | `AF_3_inference.py` (+ runner) | Sliding-window inference on arbitrarily large GeoTIFF/VRT mosaics with seamless overlap blending, writing georeferenced segmentation rasters |
+| AF_3 | `tools/AF_3_inference.py` (+ runner) | Sliding-window inference on arbitrarily large GeoTIFF/VRT mosaics with seamless overlap blending, writing georeferenced segmentation rasters |
 
 Project-specific code added on top of upstream AerialFormer:
 

@@ -76,7 +76,7 @@ class SwinStemTransformer(BaseModule):
 
     def __init__(self,
                  pretrain_img_size=224,
-                 in_channels=3,                     #### antalet rasterband (default är RGB) edit: swin stödjer bara RGB, kör fusion med andra ML metoder.
+                 in_channels=3,
                  embed_dims=96,
                  patch_size=4,
                  window_size=7,
