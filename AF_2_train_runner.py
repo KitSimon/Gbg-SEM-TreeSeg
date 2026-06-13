@@ -3,7 +3,7 @@
 Runner script for the AerialFormer / mmsegmentation training script.
 
 Edit the configuration below, then run:
-    python run_train.py
+    python AF_2_train_runner.py
 """
 
 import os, datetime

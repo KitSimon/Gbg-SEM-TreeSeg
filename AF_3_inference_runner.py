@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-Runner script for AerialFormer inference.
+Runner script for AF_3_inference.py
 
 Edit the configuration below, then run:
-    python run_inference.py
+    python AF_3_inference_runner.py
 """
 
 import subprocess
@@ -62,6 +62,7 @@ OVERLAP_MODE = "blend"
 #  Which bands to read from the input raster, as 1-based indices.
 #  Must match what the model was trained on.
 #  Set to None to use all bands.
+#  SWIN backbone supports only 3 input channels. Deprecated for the time being.
 # -------------------------------------------------------------------
 
 BANDS = "1,2,3"         # e.g. "1,2,3" for RGB, "1,2,3,4" for RGBI

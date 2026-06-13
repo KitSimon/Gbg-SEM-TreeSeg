@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-Runner script for prepare_tiles.py
+Runner script for AF_1_preprocess.py
 
 Edit the configuration below, then run:
-    python run_prepare_tiles.py
+    python AF_1_preprocess_runner.py
 """
 
 import subprocess
