@@ -18,8 +18,8 @@ mmsegmentation 0.30.0 (the 0.x branch — **not** compatible with mmsegmentation
 1.x):
 
 ```bash
-conda create -n aerialformer python=3.9
-conda activate aerialformer
+conda create -n gbg_sem_treeseg python=3.9
+conda activate gbg_sem_treeseg
 
 # PyTorch — pick the CUDA build matching your driver, see pytorch.org
 pip install torch==2.0.1 torchvision
