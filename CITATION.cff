@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Gbg-SEM-TreeSeg"
+abstract: >-
+  Semantic segmentation of tree canopy and water in large aerial orthophoto
+  mosaics over Gothenburg, Sweden, using the AerialFormer architecture
+  (Swin Transformer encoder + multi-dilated CNN decoder) on mmsegmentation 0.x.
+  Produces the canopy-prior segmentation raster consumed by the Gbg-INST-TreeSeg
+  tree-crown instance pipeline.
+type: software
+authors:
+  - name: "KitSimon"
+license: AGPL-3.0-or-later
+repository-code: "https://github.com/KitSimon/Gbg-SEM-TreeSeg"
+year: 2026
+keywords:
+  - semantic segmentation
+  - tree canopy mapping
+  - remote sensing
+  - AerialFormer
+  - GeoAI
+references:
+  - type: article
+    title: "AerialFormer: Multi-resolution Transformer for Aerial Image Segmentation"
+    authors:
+      - family-names: Yamazaki
+        given-names: Kashu
+      - family-names: Hanyu
+        given-names: Taisei
+      - family-names: Tran
+        given-names: Minh
+      - family-names: Garcia
+        given-names: Adrian
+      - family-names: Tran
+        given-names: Anh
+      - family-names: McCann
+        given-names: Roy
+      - family-names: Liao
+        given-names: Haitao
+      - family-names: Rainwater
+        given-names: Chase
+      - family-names: Adkins
+        given-names: Meredith
+      - family-names: Molthan
+        given-names: Andrew
+    year: 2023
+    url: "https://arxiv.org/abs/2306.06842"
+    notes: "arXiv:2306.06842"
